@@ -18,8 +18,9 @@ app.use('/auth', userRouter);
 app.use(checkAuth)
 app.use('/hostel', hostelRouter);
 
+const port = process.env.PORT || 8080
 
-app.listen(8080, () => {
+app.listen(port, () => {
   connection();
-  console.log(`server is running at http://localhost:8080`);
+  console.log(`server is running at http://localhost:${port}`);
 });
